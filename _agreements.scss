@@ -1,0 +1,83 @@
+@import 'vars';
+@import 'mixins';
+@import 'header';
+@import 'footer';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.agreement {
+    margin-top: 80px;
+    background: linear-gradient(#eaeaf0, #94c3f1);
+
+    &__box {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+
+    &__content {
+        @include flex_style($flexDirection: column, $gap: 20px, $alignItems: flex-start);
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+    &__title {
+        @include font_style($fontSize: 24px, $fontWeight: 600);
+        color: $colorSiteDark;
+        margin-bottom: 40px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @include font_style($fontSize: 16px, $fontWeight: 600);
+        color: $colorSiteDark;
+
+    }
+
+    &__list {
+        list-style-type: none;
+        @include flex_style($flexDirection: column, $gap: 10px, $alignItems: flex-start);
+    }
+
+    &__text {
+        @include font_style($fontSize: 12px, $fontHeight: 1.5);
+        color: $colorSiteDark;
+        text-indent: 15px;
+        text-align: justify;
+    }
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+}
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .agreement {
+        margin-top: 60px;
+        &__box {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+        &__title{
+            @include font_style($fontSize: 18px, $fontWeight: 600);
+        }
+        &__subtitle{
+            @include font_style($fontSize: 14px, $fontWeight: 600);
+        }
+    }
+}

@@ -1,0 +1,1008 @@
+@import 'vars';
+@import 'mixins';
+@import 'header';
+@import 'footer';
+@import 'agreements';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes slide_foto {
+    0% {
+        transform: translateY(-500px);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+}
+
+.center {
+    padding-left: calc(50% - $widthContent / 2);
+    padding-right: calc(50% - $widthContent / 2);
+}
+
+.promo {
+    margin-top: 80px;
+    background-image: url('./img/background_picture.webp');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__box {
+        position: relative;
+        padding-top: 100px;
+        padding-bottom: 120px;
+        @include flex_style($flexDirection: column, $flexWrap: nowrap, $alignItems: flex-start);
+    }
+
+    &__top {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 75% 23%;
+        grid-template-rows: repeat(3, 1fr);
+        padding: 10px;
+        column-gap: 2%;
+    }
+
+    &__type-box {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    &__box-foto {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        grid-row: span 2;
+        justify-self: start;
+        max-width: 200px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 10px solid $colorTextElephantBone;
+        animation: slide_foto 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation-delay: 1s;
+    }
+
+    &__title-name {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    &__down {
+        width: 70%;
+        @include flex_style ($flexDirection: column, $gap: 30px, $flexWrap: nowrap, $alignItems: flex-start);
+        padding: 10px;
+        text-align: justify;
+    }
+
+    &__info {
+        @include flex_style ($flexDirection: column, $gap: 10px, $flexWrap: nowrap, $alignItems: flex-start);
+    }
+
+    &__title {
+        @include font_style($fontSize: 28px, $fontWeight: 600);
+        color: $colorTextElephantBone;
+    }
+
+    &__subtitle {
+        color: $colorTextElephantBone;
+        @include font_style($fontSize: 16px, $fontWeight: 400);
+    }
+
+    &__type-box {
+        min-height: 70px;
+    }
+
+    &__subtitle_typing {
+        display: none;
+
+    }
+
+    &__subtitle_slider {
+        color: $colorTextElephantBone;
+        @include font_style($fontSize: 18px, $fontWeight: 600);
+    }
+
+    &__foto {
+        object-fit: cover;
+    }
+
+    &__address {
+        width: 80%;
+    }
+
+    &__contacts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    &__rights {
+        @include font_style($fontSize: 11px, $fontWeight: 300);
+        color: $colorTextElephantBone;
+    }
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    @include font_style($fontSize: 20px, $fontWeight: 600);
+    color: #fff;
+    border-radius: 40px;
+    box-shadow: 6px 6px 12px #161616, -6px -6px 12px #2f2e3b;
+    transition: 0.3s;
+
+    &:hover {
+        box-shadow: inset 6px 6px 12px #161616, inset -6px -6px 12px #2f2e3b;
+        color: #7a7896;
+    }
+}
+
+.contacts {
+
+    &__title,
+    &__info,
+    &__icon-name {
+        color: $colorTextElephantBone;
+        @include font_style($fontSize: 14px);
+        padding: 10px 10px 10px 0;
+        transition: 0.3s;
+    }
+
+    &__info {
+        @include flex_style($justifyContent: flex-start, $gap: 10px);
+    }
+
+    &__info_larger {
+        grid-column: span 2;
+    }
+
+    &__title {
+        &:hover {
+            color: $colorBrightBlue;
+        }
+    }
+
+    &__info:hover .contacts__icon path {
+        fill: $colorBrightBlue;
+    }
+
+    &__info:hover .contacts__icon-name {
+        color: $colorBrightBlue;
+    }
+}
+
+.skills {
+    border-bottom: 1px solid $colorSiteDark;
+    background: $colorBackGround;
+
+    &__box {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        @include flex_style($flexDirection: column, $gap: 60px);
+        text-align: center;
+    }
+
+    &__cards-box {
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(3, 200px);
+        gap: 30px;
+        justify-content: space-evenly;
+        padding: 30px;
+        background: radial-gradient(#edf1cf, $colorLightBlue);
+        border-radius: 10px;
+    }
+
+    &__card {
+        min-height: 200px;
+        background: $colorSiteLightGrey;
+        position: relative;
+        @include flex_style($justifyContent: center, $flexDirection: column);
+        box-shadow: 1px 10px 20px rgba(0, 0, 0, 0.3);
+        border-radius: 20px;
+        color: #fff;
+        overflow: hidden;
+    }
+
+    &__left-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $colorSiteDark;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        transition: all 0.4s;
+        @include flex_style($justifyContent: center);
+    }
+
+    &__card-title {
+        @include font_style($fontSize: 24px, $fontWeight: 600);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50% -50%);
+    }
+
+    &__card-inside {
+        @include font_style($fontSize: 24px, $fontWeight: 600);
+        color: $colorBrightBlue;
+    }
+
+    &__arr-container,
+    &__shut {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: #fff;
+        bottom: 0;
+        right: 0;
+        border-radius: 20px 0 20px 0;
+        cursor: pointer;
+        transition: all 0.4s;
+    }
+
+    &__arrow {
+        height: 1.5em;
+        transform: rotate(45deg);
+
+        &:hover path {
+            fill: $colorBrightBlue;
+        }
+    }
+
+    &__arrow path {
+        fill: $colorSiteDark;
+        height: 3em;
+    }
+
+    &__arrow-shut {
+        height: 1.5em;
+        transition: 0.3s;
+
+        &:hover path {
+            fill: $colorBrightBlue;
+        }
+    }
+
+    &__arrow-shut path {
+        fill: $colorSiteDark;
+        height: 3em;
+    }
+
+}
+
+.education {
+    border-bottom: 1px solid $colorSiteDark;
+    background: $colorBackGround;
+
+    &__box {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        @include flex_style($flexDirection: column, $gap: 60px);
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__cards-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        position: relative;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &__card {
+        width: 100%;
+        min-height: 250px;
+        @include flex_style($justifyContent: center);
+        transition: 0.3s;
+        position: relative;
+        padding: 10%;
+        background: #fff;
+        border-radius: 5px;
+        color: $colorSiteDark;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 5%;
+            bottom: 5%;
+            left: 5%;
+            right: 5%;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        &::before {
+            border-top: 2px solid $colorSiteDark;
+            border-bottom: 2px solid $colorSiteDark;
+            transform: scaleX(0);
+        }
+
+        &::after {
+            border-right: 2px solid $colorSiteDark;
+            border-left: 2px solid $colorSiteDark;
+            transform: scaleY(0);
+        }
+
+        &:hover::before,
+        &:hover::after {
+            transform: scale(1);
+        }
+    }
+
+    &__card-title {
+        @include font_style($fontSize: 16px, $fontWeight: 600);
+    }
+
+    &__card-title,
+    &__card-text_up {
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        max-width: 90%;
+        word-wrap: break-word;
+        max-width: 85%;
+    }
+
+    &__card-text_down {
+        position: absolute;
+        bottom: 40%;
+        max-width: 85%;
+    }
+
+    &__card-text_up,
+    &__card-text_down {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        @include font_style();
+    }
+
+    &__card:hover &__card-text_up {
+        top: 10%;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__card:hover &__card-text_down {
+        bottom: 11%;
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+.arr-center {
+    @include flex_style($justifyContent: center);
+}
+
+.off {
+    transform: translate(-75%, -75%) rotate(90deg);
+}
+
+.active_skill {
+    transform: rotate(0deg);
+}
+
+.experience {
+    background: $colorBackGround;
+    border-bottom: 1px solid $colorSiteDark;
+
+    &__box {
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 120px;
+        @include flex_style($flexDirection: column, $gap: 30px);
+        text-align: center;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        position: relative;
+        width: 90%;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    &__card {
+        position: relative;
+        background: $colorTextElephantBone;
+        @include flex_style($flexDirection: column, $flexWrap: nowrap, $alignItems: start);
+        width: 100%;
+        min-height: 180px;
+        padding: 10px 10px 10px 50px;
+        text-align: justify;
+        border-radius: 5px;
+
+        &:hover .experience__mask-box {
+            width: 50px;
+            height: 50px;
+            left: -25px;
+            top: calc(50% - 25px);
+            background: $colorBrightBlue;
+        }
+    }
+
+    &__card-title {
+        @include font-style($fontSize: 13px, $fontWeight: 600);
+    }
+
+    &__card-info {
+        @include font-style($fontSize: 13px);
+    }
+
+    &__mask-box {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: $colorSiteDark;
+        z-index: 1;
+        text-align: center;
+        @include flex_style($justifyContent: center);
+        transition: 0.5s ease-in-out;
+        border-radius: 5px;
+    }
+
+    &__mask-box::before {
+        content: 'EXPERIENCE';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        @include font_style($fontSize: 24px, $fontWeight: 700);
+        color: rgba(255, 255, 255, 0.2);
+        padding-bottom: 20px;
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s;
+    }
+
+    &__card:hover &__mask-box::before {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__icon {
+        @include flex_style($justifyContent: center);
+        text-align: center;
+    }
+}
+
+
+.portfolio {
+    background: $colorBackGround;
+    border-bottom: 1px solid $colorSiteDark;
+
+    &__box {
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        @include flex_style($flexDirection: column, $gap: 60px);
+        text-align: center;
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &__first-view {
+        position: relative;
+        height: 180px;
+        @include flex_style($justifyContent: center);
+        z-index: 1;
+        transform: translateY(90px);
+        background-image: url('./img/project_1.webp');
+        background-position: center 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.5s;
+        cursor: pointer;
+        border-bottom: 1px solid $colorSiteDark;
+    }
+
+    &__card:hover &__first-view {
+        transform: translateY(0px);
+    }
+
+    &__second-view {
+        height: 180px;
+        @include flex_style($flexDirection: column, $justifyContent: center, $gap: 30px);
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+        transform: translateY(-90px);
+        transition: 0.5s;
+    }
+
+    &__card:hover &__second-view {
+        transform: translateY(0px);
+    }
+
+    .portfolio__shut-card {
+        background: rgba(133, 130, 130, 1);
+    }
+
+    &__card-title {
+        @include font_style($fontSize: 24px, $fontWeight: 600);
+        text-align: center;
+    }
+
+    &__info {
+        @include font_style($fontSize: 18px);
+    }
+
+    &__card-title,
+    &__info {
+        color: $colorSiteDark;
+    }
+
+    &__link {
+        color: #fff;
+        padding: 10px 20px;
+        background: $colorSiteDark;
+        border-radius: 20px;
+        border: 1px solid $colorSiteDark;
+        @include font_style($fontSize: 14px, $fontWeight: 600);
+        transition: 0.3s;
+
+        &:hover {
+            background: $colorBrightBlue;
+            border: 1px solid $colorBrightBlue;
+        }
+    }
+
+    &__shut-link {
+        background: transparent;
+        border: 1px solid transparent;
+    }
+}
+
+.anchor-contacts {
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+.sections-title-box {
+    width: 80%;
+    text-align: center;
+    @include flex_style($flexDirection: column, $gap: 30px);
+}
+
+.sections-title {
+    color: $colorSiteDark;
+    @include font_style($fontSize: 26px, $fontWeight: 600);
+}
+
+.sections-text {
+    max-width: 70%;
+    @include font_style($fontSize: 20px, $fontHeight: 1.5);
+    color: $colorSiteDark;
+}
+
+.user-agree {
+    display: block;
+    background: transparent;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 200;
+
+    &__box {
+        border-radius: 10px;
+        background: #fff;
+        padding: 10px;
+        @include flex_style($flexWrap: nowrap, $gap: 20px);
+        max-width: 70%;
+        box-shadow: 2px 3px 30px rgba(0, 0, 0, 0.5);
+        margin-left: 30%;
+    }
+
+    &__text {
+        text-align: justify;
+        @include font_style($fontSize: 14px);
+    }
+
+    &__link {
+        cursor: pointer;
+        color: $colorSiteDark;
+        @include font_style($fontSize: 14px, $fontWeight: 600);
+
+        &:hover {
+            color: $colorBrightBlue;
+        }
+    }
+
+    &__button {
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: 1px solid $colorSiteDark;
+        @include font_style($fontSize: 14px);
+        font-family: 'Montserrat', sans-serif;
+        color: #fff;
+        background: $colorSiteDark;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            color: #fff;
+            background: $colorBrightBlue;
+            border: 1px solid $colorBrightBlue;
+        }
+    }
+}
+
+.not-show {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+    .sections-title {
+        @include font_style($fontSize: 22px, $fontWeight: 400);
+    }
+
+    .sections-text {
+        @include font_style($fontSize: 16px, $fontHeight: 1.3);
+    }
+
+    .sections-title-box {
+        @include flex_style($flexDirection: column, $gap: 15px);
+    }
+
+    .promo {
+        &__box {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        &__title {
+            @include font_style($fontSize: 22px, $fontWeight: 600);
+        }
+
+        &__subtitle,
+        &__subtitle_slider {
+            @include font_style($fontSize: 16px);
+        }
+    }
+
+    .skills {
+        &__box {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            @include flex_style($flexDirection: column, $gap: 30px);
+        }
+
+        &__cards-box {
+            grid-template-columns: repeat(2, 180px);
+        }
+
+        &__card {
+            min-height: 180px;
+        }
+
+        &__card-title {
+            @include font_style($fontSize: 20px, $fontWeight: 600);
+        }
+    }
+
+    .education {
+        &__box {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            @include flex_style($flexDirection: column, $gap: 30px);
+        }
+
+        &__card {
+            min-height: 280px;
+        }
+    }
+
+    .portfolio {
+        &__box {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            @include flex_style($flexDirection: column, $gap: 15px);
+        }
+
+        &__card-title {
+            @include font_style($fontSize: 20px, $fontWeight: 600);
+        }
+
+        &__info {
+            @include font_style($fontSize: 16px);
+        }
+    }
+
+    .experience {
+        &__box {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            @include flex_style($flexDirection: column, $gap: 30px);
+        }
+
+        &__container {
+            grid-template-columns: 70%;
+            justify-content: center;
+        }
+    }
+
+    .button {
+        padding: 10px 20px;
+        @include font_style($fontSize: 18px);
+    }
+
+    .user-agree {
+        &__text {
+            @include font_style($fontSize: 11px);
+        }
+
+        &__link {
+            @include font_style($fontSize: 11px, $fontWeight: 600);
+        }
+
+        &__button {
+            padding: 5px 12px;
+            @include font_style($fontSize: 11px);
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .promo {
+        margin-top: 60px;
+
+        &__top {
+            grid-template-columns: 75% 23%;
+            grid-template-rows: 40px 40px auto;
+        }
+
+        &__box {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+        }
+
+        &__box-foto {
+            grid-column-start: 2;
+            grid-row: span 2;
+            justify-self: start;
+            border: 5px solid $colorTextElephantBone;
+            max-width: 100%;
+        }
+
+        &__type-box {
+            grid-column: span 2;
+            text-align: justify;
+            min-height: 80px;
+        }
+
+        &__contacts {
+            grid-template-columns: repeat(3, auto);
+            grid-template-rows: 35px 35px;
+        }
+
+        &__down {
+            width: 100%;
+        }
+
+        &__title {
+            @include font_style($fontSize: 16px, $fontWeight: 400);
+        }
+
+        &__subtitle {
+            @include font_style($fontSize: 12px);
+        }
+
+        &__subtitle_slider {
+            @include font_style($fontSize: 12px);
+        }
+
+    }
+
+    .education {
+        &__box {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        &__cards-box {
+            grid-template-columns: 300px;
+            justify-content: center;
+        }
+
+        &__card {
+            min-height: 230px;
+        }
+
+    }
+
+    .portfolio {
+        &__box {
+            padding-top: 60px;
+        }
+
+        &__card-title {
+            @include font_style($fontSize: 16px);
+        }
+
+        &__info {
+            @include font_style($fontSize: 12px);
+        }
+
+        &__link {
+            padding: 5px 10px;
+            @include font_style($fontSize: 12px);
+        }
+
+    }
+
+    .skills {
+        &__box {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        &__cards-box {
+            grid-template-columns: repeat(2, 200px);
+        }
+    }
+
+    .experience {
+        &__box {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+    }
+
+    .button {
+        padding: 5px 15px;
+        @include font_style($fontSize: 14px);
+    }
+
+    .sections-title {
+        @include font_style($fontSize: 16px);
+    }
+
+    .sections-text {
+        @include font_style($fontSize: 14px, $fontHeight: 1.2);
+    }
+
+    .sections-title-box {
+        width: 90%;
+        text-align: justify;
+        text-indent: 5px;
+    }
+
+    .contacts__title,
+    .contacts__info,
+    .contacts__icon-name {
+        @include font_style($fontSize: 11px);
+        padding: 2px 2px 2px 0;
+    }
+
+    .anchor-contacts {
+        padding-top: 80px;
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 550px) {
+    .promo {
+        &__address {
+            width: 100%;
+        }
+    }
+
+    .skills {
+        &__cards-box {
+            grid-template-columns: 200px;
+        }
+    }
+
+    .portfolio {
+
+        &__cards {
+            display: grid;
+            grid-template-columns: 60%;
+            justify-content: center;
+        }
+
+        &__first-view {
+            height: 150px;
+            transform: translateY(75px);
+        }
+
+        &__second-view {
+            height: 150px;
+            transform: translateY(-75px);
+        }
+
+        &__card-title {
+            @include font_style($fontSize: 20px);
+        }
+
+        &__info {
+            @include font_style($fontSize: 12px);
+        }
+
+        &__link {
+            @include font_style($fontSize: 11px);
+        }
+    }
+
+    .experience {
+        &__container {
+            grid-template-columns: 90%;
+        }
+
+        &__card {
+            padding: 10px 10px 10px 30px;
+        }
+
+        &__card-title {
+            @include font-style($fontSize: 12px);
+        }
+
+        &__card-info {
+            @include font-style($fontSize: 11px);
+        }
+    }
+}

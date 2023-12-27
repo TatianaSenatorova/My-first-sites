@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senatorova Tatiana</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&family=Raleway:wght@800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./burger.js" defer></script>
+    <script src="./skills_cards.js" defer></script>
+    <script src="./cookie.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script type="module" src="./jquery-3.7.1.min.js"></script>
+    <script src="./typing_text.js" defer></script>
+</head>
+
+<body>
+    <header id="header" class="header center">
+        <div class="header__box">
+            <a class="header__logo" href="index.html">
+                <h1 class="header__logo">Татьяна
+                </h1>
+            </a>
+            <nav class="header__nav">
+                <a class="header__link" href="#about_me">О ceбе</a>
+                <a class="header__link" href="#skills">Навыки</a>
+                <a class="header__link" href="#education">Образование</a>
+                <a class="header__link" href="#portfolio">Портфолио</a>
+                <a class="header__link" href="#experience">Опыт</a>
+                <a class="header__link" href="#contacts">Контакты</a>
+            </nav>
+            <div class="header__burger">
+                <div class="header__burger-box">
+                    <span class="header__burger-line"></span>
+                </div>
+            </div>
+            <nav class="header__burger-nav">
+                <ul class="header__menu-box">
+                    <li class="header__menu-item">
+                        <a class="header__link header__link_menu" href="#about_me">О
+                            ceбе</a>
+                    </li>
+                    <li class="header__menu-item"><a class="header__link header__link_menu" href="#skills">Навыки</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__link header__link_menu" href="#education">Образование</a>
+                    </li>
+
+                    <li class="header__menu-item">
+                        <a class="header__link header__link_menu" href="#portfolio">Портфолио</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__link header__link_menu" href="#experience">Опыт</a>
+                    </li>
+                    <li class="header__menu-item">
+                        <a class="header__link header__link_menu" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="popup" id="popup"></div>
+        </div>
+    </header>
+    <section class="promo" id="about_me">
+        <div class="promo__box center">
+            <div class="promo__top">
+                <h1 class="promo__title">Здравствуйте!</h1>
+                <h1 class="promo__title promo__title-name">Меня зовут Сенаторова Татьяна. </h1>
+                <div class="promo__type-box">
+                    <h5 class="promo__subtitle promo__subtitle_typing">Я - начинающий HTML-верстальщик и
+                        фронтенд-разработчик. В настоящее время ищу работу и обучаюсь на платформе Geek Brains.</h5>
+                    <strong class=" promo__subtitle_slider text-slider"></strong>
+                </div>
+                <div class="promo__box-foto">
+                    <img class="promo__foto" src="./img/me2.png" alt="my foto">
+                </div>
+            </div>
+            <div class="promo__down">
+                <div class="promo__info">
+                    <h5 class="promo__subtitle">Выполню верстку и фронтенд-разработку качественно и быстро.</h5>
+                    <h5 class="promo__subtitle">Принимаю заказы.</h5>
+                    <h5 class="promo__subtitle"> Зарегистрирована в качестве самозанятого.</h5>
+                </div>
+                <address class="promo__address anchor-contacts" id="contacts">
+                    <div class="promo__contacts contacts">
+                        <a href="mailto:1975tanya@bk.ru"> <span class="contacts__title">E-mail:</span></a>
+                        <a class="contacts__info contacts__info_larger" href="mailto:1975tanya@bk.ru">
+                            <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" height="1.8em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                                    fill="#FFFFF0" />
+                            </svg>
+                            <span class="contacts__icon-name">1975tanya@bk.ru</span>
+                        </a>
+                        <a href="https://t.me/tatiana_senatorova">
+                            <span class="contacts__title">Я в соцсетях:</span></a>
+                        <a class="contacts__info" href="https://t.me/tatiana_senatorova">
+                            <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" height="1.8em"
+                                viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"
+                                    fill="#FFFFF0" />
+                            </svg>
+                            <span class="contacts__icon-name"> Telegram</span>
+                        </a>
+                        <a class="contacts__info" href="https://vk.com/id187927756">
+                            <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" height="1.8em"
+                                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M31.4907 63.4907C0 94.9813 0 145.671 0 247.04V264.96C0 366.329 0 417.019 31.4907 448.509C62.9813 480 113.671 480 215.04 480H232.96C334.329 480 385.019 480 416.509 448.509C448 417.019 448 366.329 448 264.96V247.04C448 145.671 448 94.9813 416.509 63.4907C385.019 32 334.329 32 232.96 32H215.04C113.671 32 62.9813 32 31.4907 63.4907ZM75.6 168.267H126.747C128.427 253.76 166.133 289.973 196 297.44V168.267H244.16V242C273.653 238.827 304.64 205.227 315.093 168.267H363.253C359.313 187.435 351.46 205.583 340.186 221.579C328.913 237.574 314.461 251.071 297.733 261.227C316.41 270.499 332.907 283.63 346.132 299.751C359.357 315.873 369.01 334.618 374.453 354.747H321.44C316.555 337.262 306.614 321.61 292.865 309.754C279.117 297.899 262.173 290.368 244.16 288.107V354.747H238.373C136.267 354.747 78.0267 284.747 75.6 168.267Z"
+                                    fill="#FFFFF0" />
+                            </svg>
+                            <span class="contacts__icon-name">
+                                Вконтакте
+                            </span>
+                        </a>
+                    </div>
+                </address>
+                <a href="./CV_Senatorova.doc" class="button">Загрузить резюме</a>
+            </div>
+        </div>
+        <a class="promo__rights"
+            href='https://www.freepik.com/free-photo/glasses-near-laptop-reflect-light-from-screen-dark-copy-space_19576454.htm#query=glasses%20near%20laptop%20reflect%20light%20from%20screen%20dark&position=7&from_view=search&track=ais'>Background foto
+            designed by Freepik</a>
+    </section>
+    <section class="skills" id="skills">
+        <div class="skills__box center">
+            <div class="skills__title-box sections-title-box">
+                <h2 class="skills__title sections-title">Навыки</h2>
+                <p class="skills__text sections-text">Я - начинающий специалист. Мне очень хотелось бы работать в
+                    команде людей, которые также увлечены созданием чего-то потрясающего.</p>
+
+                <p class="skills__text sections-text">Дизайн и разработка данного сайта сделана мною. Сайт создан с
+                    использованием: HTML, CSS, препроцессора SASS, JavaScript, методологии БЭМ.</p>
+                <p class="skills__text sections-text">Уровень скилов.</p>
+            </div>
+            <div class="skills__cards-box">
+                <div class="skills__card">
+                    <h5 class="skills__card-inside">100%</h5>
+                    <div class="skills__arr-container arr-center ">
+                        <svg class="skills__arrow" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z" />
+                        </svg>
+                    </div>
+                    <div class="skills__left-container active_skill">
+                        <p class="skills__card-title">HTML</p>
+                        <div class="skills__shut arr-center">
+                            <svg class="skills__arrow-shut" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__card">
+                    <h5 class="skills__card-inside">100%</h5>
+                    <div class="skills__arr-container arr-center ">
+                        <svg class="skills__arrow" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z" />
+                        </svg>
+                    </div>
+                    <div class="skills__left-container active_skill">
+                        <p class="skills__card-title">CSS</p>
+                        <div class="skills__shut arr-center">
+                            <svg class="skills__arrow-shut" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z" />
+                            </svg>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="skills__card">
+                    <h5 class="skills__card-inside">70%</h5>
+                    <div class="skills__arr-container arr-center ">
+                        <svg class="skills__arrow" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z" />
+                        </svg>
+                    </div>
+                    <div class="skills__left-container active_skill">
+                        <p class="skills__card-title">JavaScript</p>
+                        <div class="skills__shut arr-center">
+                            <svg class="skills__arrow-shut" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__card">
+                    <h5 class="skills__card-inside">100%</h5>
+                    <div class="skills__arr-container arr-center ">
+                        <svg class="skills__arrow" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z" />
+                        </svg>
+                    </div>
+                    <div class="skills__left-container active_skill">
+                        <p class="skills__card-title">SASS</p>
+                        <div class="skills__shut arr-center">
+                            <svg class="skills__arrow-shut" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__card">
+                    <h5 class="skills__card-inside">90%</h5>
+                    <div class="skills__arr-container arr-center ">
+                        <svg class="skills__arrow" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z" />
+                        </svg>
+                    </div>
+                    <div class="skills__left-container active_skill">
+                        <p class="skills__card-title">Bootstrap</p>
+                        <div class="skills__shut arr-center">
+                            <svg class="skills__arrow-shut" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills__card">
+                    <h5 class="skills__card-inside">Intermediate</h5>
+                    <div class="skills__arr-container arr-center ">
+                        <svg class="skills__arrow" xmlns="http://www.w3.org/2000/svg" height="1em"
+                            viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M0 256a256 256 0 1 0 512 0A256 256 0 1 0 0 256zM281 385c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l71-71L136 280c-13.3 0-24-10.7-24-24s10.7-24 24-24l182.1 0-71-71c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0L393 239c9.4 9.4 9.4 24.6 0 33.9L281 385z" />
+                        </svg>
+                    </div>
+                    <div class="skills__left-container active_skill">
+                        <p class="skills__card-title">English</p>
+                        <div class="skills__shut arr-center">
+                            <svg class="skills__arrow-shut" xmlns="http://www.w3.org/2000/svg" height="1em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M512 256A256 256 0 1 0 0 256a256 256 0 1 0 512 0zM231 127c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-71 71L376 232c13.3 0 24 10.7 24 24s-10.7 24-24 24l-182.1 0 71 71c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0L119 273c-9.4-9.4-9.4-24.6 0-33.9L231 127z" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="education" id="education">
+        <div class="education__box center">
+            <div class="education__title-box sections-title-box">
+                <h2 class="education__title sections-title">Образование</h2>
+            </div>
+            <div class="education__cards-box">
+                <article class="education__card">
+                    <p class="education__card-text_up">1993г. - 1999г.</p>
+                    <h3 class="education__card-title">Московский государственный технический университет им.Н.Э.Баумана
+                    </h3>
+                    <p class="education__card-text_down">инженер по специальности "Системы жизнеобеспечения и защиты
+                        летательных
+                        аппаратов"</p>
+                </article>
+                <article class="education__card">
+                    <p class="education__card-text_up">2010г. - 2011г.</p>
+                    <h3 class="education__card-title">Институт профессиональных бухгалтеров и аудиторов России</h3>
+                    <p class="education__card-text_down">профессиональный бухгалтер коммерческой организации</p>
+                </article>
+                <article class="education__card">
+                    <p class="education__card-text_up">2022г. - н.в.</p>
+                    <h3 class="education__card-title">Обучающая платформа Geek Brains</h3>
+                    <p class="education__card-text_down">фронтенд-разработчик</p>
+                </article>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio__box center">
+            <div class="portfolio__title-box sections-title-box">
+                <h2 class="portfolio__title sections-title">Портфолио</h2>
+            </div>
+            <div class="portfolio__cards">
+                <div class="portfolio__card">
+                    <div class="portfolio__card-view portfolio__first-view">
+                        <h3 class="portfolio__card-title">Вёрстка</h3>
+                    </div>
+                    <div class="portfolio__card-view portfolio__second-view ">
+                        <p class="portfolio__info">Вёрстка с использованием только HTML и CSS</p>
+                        <a class="portfolio__link" href="./project_test/index.html">Просмотреть</a>
+                    </div>
+                </div>
+                <div class="portfolio__card">
+                    <div class="portfolio__card-view portfolio__first-view portfolio__shut-card">
+                        <h3 class="portfolio__card-title">В разработке</h3>
+                    </div>
+                    <div class="portfolio__card-view portfolio__second-view ">
+                        <p class="portfolio__info">Раздел будет готов в ближайшее время</p>
+                    </div>
+                </div>
+                <div class="portfolio__card">
+                    <div class="portfolio__card-view portfolio__first-view portfolio__shut-card">
+                        <h3 class="portfolio__card-title">В разработке</h3>
+                    </div>
+                    <div class="portfolio__card-view portfolio__second-view">
+                        <p class="portfolio__info">Раздел будет готов в ближайшее время</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="experience" id="experience">
+        <div class="experience__box center">
+            <div class="experience__title-box sections-title-box">
+                <h2 class="experience__title sections-title">Опыт</h2>
+                <p class="experience__text sections-text">Мой опыт связан в основном с бухгалтерией. Но я хочу работать
+                    в IT
+                    сфере фронтенд-разработчиком. </p>
+            </div>
+            <div class="experience__container">
+                <div class="experience__card">
+                    <div class="experience__mask-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 640 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M128 0C92.7 0 64 28.7 64 64V288H19.2C8.6 288 0 296.6 0 307.2C0 349.6 34.4 384 76.8 384H320V288H128V64H448V96h64V64c0-35.3-28.7-64-64-64H128zM512 128H400c-26.5 0-48 21.5-48 48V464c0 26.5 21.5 48 48 48H592c26.5 0 48-21.5 48-48V256H544c-17.7 0-32-14.3-32-32V128zm32 0v96h96l-96-96z"
+                                fill="#FFFFF0" />
+                        </svg>
+                    </div>
+                    <p class="experience__card-title">ООО "Эконом-Строй"</p>
+                    <p class="experience__card-info">Главный бухгалтер</p>
+                    <p class="experience__card-info">Ведение бухгалтерского и налогового учета в полном объеме.</p>
+                    <p class="experience__card-info">Июнь 2007 - Январь 2018</p>
+                </div>
+                <div class="experience__card">
+                    <div class="experience__mask-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 576 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M64 112c-8.8 0-16 7.2-16 16V384c0 8.8 7.2 16 16 16H512c8.8 0 16-7.2 16-16V128c0-8.8-7.2-16-16-16H64zM0 128C0 92.7 28.7 64 64 64H512c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM176 320H400c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H176c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16zm-72-72c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H120c-8.8 0-16-7.2-16-16V248zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H120c-8.8 0-16-7.2-16-16V168c0-8.8 7.2-16 16-16zm64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H200c-8.8 0-16-7.2-16-16V248zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H200c-8.8 0-16-7.2-16-16V168c0-8.8 7.2-16 16-16zm64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H280c-8.8 0-16-7.2-16-16V248zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H280c-8.8 0-16-7.2-16-16V168c0-8.8 7.2-16 16-16zm64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H360c-8.8 0-16-7.2-16-16V248zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H360c-8.8 0-16-7.2-16-16V168c0-8.8 7.2-16 16-16zm64 96c0-8.8 7.2-16 16-16h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H440c-8.8 0-16-7.2-16-16V248zm16-96h16c8.8 0 16 7.2 16 16v16c0 8.8-7.2 16-16 16H440c-8.8 0-16-7.2-16-16V168c0-8.8 7.2-16 16-16z"
+                                fill="#FFFFF0" />
+                        </svg>
+                    </div>
+                    <p class="experience__card-title">ООО "ГРЭС-1"</p>
+                    <p class="experience__card-info">Главный бухгалтер</p>
+                    <p class="experience__card-info">Ведение бухгалтерского и налогового учета в полном объеме.</p>
+                    <p class="experience__card-info">Август 2021 - Июль 2023</p>
+                </div>
+                <div class="experience__card">
+                    <div class="experience__mask-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="2em" viewBox="0 0 640 512">
+                            <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                            <path
+                                d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"
+                                fill="#FFFFF0" />
+                        </svg>
+                    </div>
+                    <p class="experience__card-title">Самозанятая</p>
+                    <p class="experience__card-info">Оказываю услуги по верстке и фронтенд разработке.</p>
+                    <p class="experience__card-info">Обучаюсь на платформе Geek Brains.</p>
+                    <p class="experience__card-info">Август 2023 - по н.в.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="user-agree center not-show">
+        <div class="user-agree__box">
+            <p class="user-agree__text">Я использую cookie. Это позволяет делать сайт лучше.
+                Продолжая пользоваться сайтом, вы <a class="user-agree__link"
+                    href="./_cookie_agreement.html">соглашаетесь с использованием файлов
+                    cookie</a>, <a class="user-agree__link" href="./_privacy_politic.html">политикой
+                    конфиденциальности</a> и <a class="user-agree__link" href="./user_agreement.html">пользовательским
+                    соглашением</a>.</p>
+            <button class="user-agree__button">Принять</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer__box center">
+            <address class="footer__address">
+                <div class="footer__contacts contacts">
+                    <div class="footer__left">
+                        <a href="mailto:1975tanya@bk.ru"> <span class="contacts__title">E-mail:</span>
+                        </a>
+                        <a class="contacts__info contacts__info_larger footer__email" href="mailto:1975tanya@bk.ru">
+                            <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" height="1.8em"
+                                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                                    fill="#FFFFF0" />
+                            </svg>
+                            <span class="contacts__icon-name">1975tanya@bk.ru</span>
+                        </a>
+                    </div>
+                    <div class="footer__right">
+                        <a href="https://t.me/tatiana_senatorova">
+                            <span class="contacts__title">Я в соцсетях:</span>
+                        </a>
+                        <a class="contacts__info" href="https://t.me/tatiana_senatorova">
+                            <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" height="1.8em"
+                                viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"
+                                    fill="#FFFFF0" />
+                            </svg>
+                            <span class="contacts__icon-name"> Telegram</span>
+                        </a>
+                        <a class="contacts__info" href="https://vk.com/id187927756">
+                            <svg class="contacts__icon" xmlns="http://www.w3.org/2000/svg" height="1.8em"
+                                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                <path
+                                    d="M31.4907 63.4907C0 94.9813 0 145.671 0 247.04V264.96C0 366.329 0 417.019 31.4907 448.509C62.9813 480 113.671 480 215.04 480H232.96C334.329 480 385.019 480 416.509 448.509C448 417.019 448 366.329 448 264.96V247.04C448 145.671 448 94.9813 416.509 63.4907C385.019 32 334.329 32 232.96 32H215.04C113.671 32 62.9813 32 31.4907 63.4907ZM75.6 168.267H126.747C128.427 253.76 166.133 289.973 196 297.44V168.267H244.16V242C273.653 238.827 304.64 205.227 315.093 168.267H363.253C359.313 187.435 351.46 205.583 340.186 221.579C328.913 237.574 314.461 251.071 297.733 261.227C316.41 270.499 332.907 283.63 346.132 299.751C359.357 315.873 369.01 334.618 374.453 354.747H321.44C316.555 337.262 306.614 321.61 292.865 309.754C279.117 297.899 262.173 290.368 244.16 288.107V354.747H238.373C136.267 354.747 78.0267 284.747 75.6 168.267Z"
+                                    fill="#FFFFF0" />
+                            </svg>
+                            <span class="contacts__icon-name">
+                                Вконтакте
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </address>
+        </div>
+    </footer>
+</body>
+
+</html>

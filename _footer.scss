@@ -1,0 +1,62 @@
+@import 'vars';
+@import 'mixins';
+
+.footer {
+    background: $colorSiteDark;
+    min-height: 90px;
+    @include flex_style($justifyContent: center);
+
+    &__box {
+        width: 100%;
+    }
+
+    &__address {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+    }
+
+    &__contacts {
+        @include flex_style();
+    }
+
+    &__right,
+    &__left {
+        @include flex_style($gap: 20px);
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+}
+
+@media(max-width: 767px) {
+    .center {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    footer {
+
+        &__right,
+        &__left {
+            @include flex_style($gap: 10px);
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .footer {
+        &__right{
+             @include flex_style($flexDirection: column, $gap: 10px, $alignItems: flex-start);
+        }
+        &__left {
+            @include flex_style($flexDirection: column, $gap: 10px, $alignItems: flex-start);
+        }
+    }
+}
